@@ -97,11 +97,28 @@ Tabel 2. Hasil rekomendasi buku
 | The Third Victim(Quincy & Rainie #2)      | Lisa Gardner       |
  
 ## Evaluation
-Evaluasi pada proyek ini menggunkan *TF-IDF Vectorizer*.
+Evaluasi pada proyek ini menggunkan *Precission* sebagai *evaluation*.
+*Precission* adalah jumlah item rekomendasi yang relevan. Untuk mngetahui relevansi item dilakukan perhitungan secara manual dengan mengetahui apakah kategori item yang direkomendasikan sesuai dengan konten item yang dipilih. kelemahan menggunakan precision sebagai evaluasi ialah tidak dapat melakukan perhitungan menggunakan *library scikit learn* karena tidak ada data target/label. 
 
-*TF-IDF Vectorizer*
+tabel 3. Buku yang sebelumnya dibaca oleh pembaca
 
-*TF-IDF Vectorizer* merupakan teknik yang akan digunakan pada sistem rekomendasi untuk menemukan representasi fitur penting dari setiap buku. Metode ini akan menghitung nilai *Term Frequency* (TF) dan *Inverse Document Frequency* (IDF). Secara sederhana, metode *TF-IDF* digunakan untuk mengetahui berapa sering suatu kata muncul di dalam dokumen. Metode ini juga terkenal efisien, mudah dan memiliki hasil yang akurat. kekurangan *TF-IDF* sejatinya berdasarkan pada *Bag of Words* (BoW), sehingga *TF-IDF* pun tidak bisa menangkap posisi teks dan semantiknya. *TF-IDF* hanya berguna sebagai fitur di level leksikal. Pada hasil evaluasi ini sistem dapat memberikan 5 keluaran hasil rekomendasi berdasarkan buku yang dibaca sebelumnya oleh pembaca.
+| title    | authors   |
+|----------|-----------|
+| Creature | Jhon Saul |
+
+tabel 4. daftar rekomendasi
+
+| title                             | authors   |
+|-----------------------------------|-----------|
+| Asylum (Blackstone Chronicles #6) | Jhon Saul |
+| Perfect Nightmare                 | Jhon Saul |
+| The presence                      | Jhon Saul |
+| The Manhattan Hunt Club           | Jhon Saul |
+| In the Dark of the Night          | Jhon Saul |
+
+*Precission* = 5/5.
+Presesi = 100%
+
 
 ## Conclusion
 Proses analisis pada dataset menghasilkan model yang dapat memberikan rekomendasi menggunakan teknik *Content Based Filtering*. Hasil akhir dari model ini ialah menghasilkan 5 keluaran rekomendasi buku yang mirip berdasarkan buku yang sebelumnya pernah dibaca oleh pembaca yang terdiri dari judul dan nama pengarang buku. dengan model sistem rekomendasi ini diharapkan para pembaca akan dengan mudah menemukan buku baru yang cocok dan sesaui dengan minat pembaca.
